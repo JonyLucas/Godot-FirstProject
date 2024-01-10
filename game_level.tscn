@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://ef8dijo7by7i"]
+
+[ext_resource type="Texture2D" uid="uid://b8ehbnqptt2hb" path="res://icon.svg" id="1_itmuh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt2fy"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdams"]
+size = Vector2(1110, 50)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1sqd5"]
+
+[node name="GameLevel" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(589, 133)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_itmuh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_nt2fy")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(732, -19)
+mass = 5.0
+gravity_scale = 1.2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+texture = ExtResource("1_itmuh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource("RectangleShape2D_nt2fy")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(529, 287)
+gravity_scale = 0.8
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
+texture = ExtResource("1_itmuh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+shape = SubResource("RectangleShape2D_nt2fy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(580, 622)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_tdams")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(3.05176e-05, 0.500008)
+scale = Vector2(1096, 47)
+texture = SubResource("CanvasTexture_1sqd5")
