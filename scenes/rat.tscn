@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://wewp64kpa0hq"]
 
-[ext_resource type="Texture2D" uid="uid://dt0thaayis0qx" path="res://sprites/enemies/oposum.png" id="1_8re84"]
+[ext_resource type="Texture2D" uid="uid://dt0thaayis0qx" path="res://sprites/enemies/oposum.png" id="1_h5o3r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8xb51"]
 radius = 17.0
@@ -53,7 +53,7 @@ shape = SubResource("CapsuleShape2D_8xb51")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(2, 0)
-texture = ExtResource("1_8re84")
+texture = ExtResource("1_h5o3r")
 hframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

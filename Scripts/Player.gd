@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 # var velocity = Vector2(0, 0)
 var gravity = 2000
+var score = 0
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -26,3 +27,6 @@ func _physics_process(_delta):
 	velocity.y += gravity * _delta # The sum makes the vector points down
 	move_and_slide() # Godot function that moves the character and makes it slide on slopes
 	# velocity.x = lerp(velocity.x, 0, 0.1)
+
+func update_score():
+	score += 1

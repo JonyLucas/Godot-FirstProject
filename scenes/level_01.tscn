@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://byborw2kkgimv"]
+[gd_scene load_steps=13 format=3 uid="uid://byborw2kkgimv"]
 
 [ext_resource type="Texture2D" uid="uid://seg4814tjjkr" path="res://sprites/environment/platform-long.png" id="1_s2eg8"]
-[ext_resource type="PackedScene" uid="uid://ycumtbmq2ro" path="res://Player.tscn" id="2_cgpo8"]
+[ext_resource type="PackedScene" uid="uid://ycumtbmq2ro" path="res://scenes/player.tscn" id="2_cgpo8"]
 [ext_resource type="Texture2D" uid="uid://dbi72ul0lgux7" path="res://sprites/environment/back.png" id="3_16r6l"]
 [ext_resource type="Texture2D" uid="uid://c45j5x3um0bh7" path="res://sprites/environment/tileset.png" id="4_mg78i"]
 [ext_resource type="Texture2D" uid="uid://d0hbyqixjyurx" path="res://sprites/environment/props.png" id="5_xcy0a"]
+[ext_resource type="PackedScene" uid="uid://d0lcp4w5nuhd3" path="res://scenes/coin.tscn" id="6_sc3k5"]
+[ext_resource type="PackedScene" uid="uid://b3w6ccpefxdn8" path="res://scenes/red_coin.tscn" id="7_2fpnr"]
+[ext_resource type="PackedScene" uid="uid://d5ntyenxapft" path="res://scenes/silver_coin.tscn" id="8_ab3ep"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oerny"]
 size = Vector2(32, 16)
@@ -1031,3 +1034,21 @@ drag_right_margin = 0.5
 drag_bottom_margin = 0.5
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="GoldCoin" parent="." instance=ExtResource("6_sc3k5")]
+position = Vector2(240, 464)
+
+[node name="GoldCoin2" parent="." instance=ExtResource("6_sc3k5")]
+position = Vector2(360, 464)
+
+[node name="GoldCoin3" parent="." instance=ExtResource("6_sc3k5")]
+position = Vector2(592, 464)
+
+[node name="RedCoin" parent="." instance=ExtResource("7_2fpnr")]
+position = Vector2(944, 336)
+
+[node name="RedCoin2" parent="." instance=ExtResource("7_2fpnr")]
+position = Vector2(1272, 208)
+
+[node name="SilverCoin" parent="." instance=ExtResource("8_ab3ep")]
+position = Vector2(1232, 592)

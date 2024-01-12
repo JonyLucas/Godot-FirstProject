@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ef8dijo7by7i"]
 
-[ext_resource type="Texture2D" uid="uid://b8ehbnqptt2hb" path="res://icon.svg" id="1_itmuh"]
+[ext_resource type="Texture2D" uid="uid://b8ehbnqptt2hb" path="res://icon.svg" id="1_1fb1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nt2fy"]
 size = Vector2(128, 128)
@@ -17,7 +17,7 @@ position = Vector2(589, 133)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-texture = ExtResource("1_itmuh")
+texture = ExtResource("1_1fb1t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("RectangleShape2D_nt2fy")
@@ -29,7 +29,7 @@ gravity_scale = 1.2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
-texture = ExtResource("1_itmuh")
+texture = ExtResource("1_1fb1t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
 shape = SubResource("RectangleShape2D_nt2fy")
@@ -40,7 +40,7 @@ gravity_scale = 0.8
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
-texture = ExtResource("1_itmuh")
+texture = ExtResource("1_1fb1t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
 shape = SubResource("RectangleShape2D_nt2fy")
