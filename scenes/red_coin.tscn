@@ -5,6 +5,21 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a4o1q"]
 
+[sub_resource type="Animation" id="Animation_b0bb1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_qtwl7"]
 resource_name = "coin_animation"
 length = 0.5
@@ -22,21 +37,6 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_b0bb1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yng7w"]
 _data = {
 "RESET": SubResource("Animation_b0bb1"),
@@ -47,6 +47,7 @@ _data = {
 texture_filter = 1
 scale = Vector2(3, 3)
 script = ExtResource("1_s5am8")
+coint_type = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_a4o1q")

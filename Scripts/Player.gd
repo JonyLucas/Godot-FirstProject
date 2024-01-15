@@ -28,5 +28,6 @@ func _physics_process(_delta):
 	move_and_slide() # Godot function that moves the character and makes it slide on slopes
 	# velocity.x = lerp(velocity.x, 0, 0.1)
 
-func update_score():
-	score += 1
+func update_score(value: int):
+	score += value
+	print(score)

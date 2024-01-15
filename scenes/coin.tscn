@@ -5,6 +5,21 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_urcv4"]
 
+[sub_resource type="Animation" id="Animation_v6352"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_ghbka"]
 resource_name = "coin_animation"
 length = 0.5
@@ -22,21 +37,6 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_v6352"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_80yhj"]
 _data = {
 "RESET": SubResource("Animation_v6352"),
@@ -46,6 +46,7 @@ _data = {
 [node name="GoldCoin" type="Area2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_gicyp")
+coint_type = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_urcv4")

@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://wewp64kpa0hq"]
+[gd_scene load_steps=7 format=3 uid="uid://wewp64kpa0hq"]
 
+[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_dccai"]
 [ext_resource type="Texture2D" uid="uid://dt0thaayis0qx" path="res://sprites/enemies/oposum.png" id="1_h5o3r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8xb51"]
@@ -7,7 +8,8 @@ radius = 17.0
 height = 34.0
 
 [sub_resource type="Animation" id="Animation_lufe3"]
-length = 0.001
+length = 0.6
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -15,10 +17,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_shd8i"]
@@ -44,7 +46,10 @@ _data = {
 "Running": SubResource("Animation_shd8i")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D"]
+texture_filter = 1
+scale = Vector2(3, 3)
+script = ExtResource("1_dccai")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
