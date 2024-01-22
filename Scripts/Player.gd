@@ -3,6 +3,7 @@ extends CharacterBody2D
 # var velocity = Vector2(0, 0)
 var gravity = 2000
 var score = 0
+@export var lives = 3
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -31,3 +32,13 @@ func _physics_process(_delta):
 func update_score(value: int):
 	score += value
 	print(score)
+
+
+func _on_fall_area_body_entered(_body:Node2D):
+	get_tree().reload_current_scene()
+	get_tree().change_scene("res://scenes/level_01.tscn")
+	# get_tree().change_scene_to_file("res://scenes/level_01.tscn")
+
+func _on_finish_area_body_entered(_body:Node2D):
+	get_tree().change_scene_to_file("res://scenes/level_01.tscn")
+	# get_tree().change_scene("res://scenes/level_01.tscn")

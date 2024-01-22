@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://wewp64kpa0hq"]
+[gd_scene load_steps=8 format=3 uid="uid://wewp64kpa0hq"]
 
 [ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_dccai"]
 [ext_resource type="Texture2D" uid="uid://dt0thaayis0qx" path="res://sprites/enemies/oposum.png" id="1_h5o3r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8xb51"]
-radius = 17.0
-height = 34.0
+radius = 14.3333
+height = 28.6667
 
 [sub_resource type="Animation" id="Animation_lufe3"]
 length = 0.6
@@ -46,13 +46,18 @@ _data = {
 "Running": SubResource("Animation_shd8i")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cun8e"]
+size = Vector2(29.3333, 21)
+
 [node name="Enemy" type="CharacterBody2D"]
 texture_filter = 1
 scale = Vector2(3, 3)
+collision_layer = 32
+collision_mask = 2
 script = ExtResource("1_dccai")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_8xb51")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -65,3 +70,15 @@ hframes = 6
 libraries = {
 "": SubResource("AnimationLibrary_qlvo3")
 }
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-15, 0)
+target_position = Vector2(0, 20)
+
+[node name="CollisionChecker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionChecker"]
+position = Vector2(0, -1.66667)
+shape = SubResource("RectangleShape2D_cun8e")
+
+[connection signal="body_entered" from="CollisionChecker" to="." method="_on_collision_checker_body_entered"]
