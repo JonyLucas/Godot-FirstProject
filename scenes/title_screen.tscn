@@ -1,0 +1,137 @@
+[gd_scene load_steps=3 format=3 uid="uid://cncfux5nhocty"]
+
+[ext_resource type="Theme" uid="uid://cmi16mk8hyf54" path="res://label_theme.tres" id="1_4uo0x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ied8"]
+bg_color = Color(0.0666667, 0.321569, 0.513726, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.223529, 0.52549, 0.780392, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 88.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+theme = ExtResource("1_4uo0x")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+text = "First Godot Game"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0625
+anchor_top = 0.17284
+anchor_right = 0.930556
+anchor_bottom = 0.944444
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ied8")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513889
+anchor_top = 0.5
+anchor_right = 0.513889
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -132.0
+offset_right = 80.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4uo0x")
+theme_override_colors/font_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_font_sizes/font_size = 54
+text = "Play"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="HowPlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513889
+anchor_top = 0.603395
+anchor_right = 0.513889
+anchor_bottom = 0.612654
+offset_left = -120.0
+offset_top = -132.0
+offset_right = 80.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4uo0x")
+theme_override_colors/font_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_font_sizes/font_size = 54
+text = "How to Play"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.479167
+anchor_top = 0.71142
+anchor_right = 0.546875
+anchor_bottom = 0.720679
+offset_left = -120.0
+offset_top = -132.0
+offset_right = 80.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4uo0x")
+theme_override_colors/font_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_font_sizes/font_size = 54
+text = "Settings"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.479167
+anchor_top = 0.819444
+anchor_right = 0.546875
+anchor_bottom = 0.828704
+offset_left = -120.0
+offset_top = -132.0
+offset_right = 80.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4uo0x")
+theme_override_colors/font_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_font_sizes/font_size = 54
+text = "Exit"
+flat = true
+metadata/_edit_use_anchors_ = true

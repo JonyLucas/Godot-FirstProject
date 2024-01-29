@@ -39,10 +39,21 @@ func update_score(value: int):
 
 
 func _on_fall_area_body_entered(_body:Node2D):
-	get_tree().reload_current_scene()
-	get_tree().change_scene("res://scenes/level_01.tscn")
-	# get_tree().change_scene_to_file("res://scenes/level_01.tscn")
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	# get_tree().reload_current_scene()
 
 func _on_finish_area_body_entered(_body:Node2D):
 	get_tree().change_scene_to_file("res://scenes/level_01.tscn")
-	# get_tree().change_scene("res://scenes/level_01.tscn")
+
+func take_damage():
+	lives -= 1
+	$AnimatedSprite.play("Hurt")
+	set_modulate(Color(1, 0.3, 0.3, 0.6))
+	emit_signal("lives_updated", lives)
+	$Timer.start()
+	if lives == 0:
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+
+
+func _on_timer_timeout():
+	set_modulate(Color(1, 1, 1, 1))

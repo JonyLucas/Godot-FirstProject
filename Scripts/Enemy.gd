@@ -16,8 +16,6 @@ func _physics_process(_delta):
 
 
 func _on_collision_checker_body_entered(body:Node2D):
-	print("enter enemy")
-	body.lives = body.lives - 1
-	print("Player lives: " + str(body.lives))
-	if body.lives == 0:
-		get_tree().reload_current_scene()
+	if body.has_method("take_damage"):
+		body.take_damage()
+		
