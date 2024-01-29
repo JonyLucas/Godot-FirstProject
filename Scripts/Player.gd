@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
 # var velocity = Vector2(0, 0)
+signal score_updated(value)
+signal lives_updated(value)
+
 var gravity = 2000
 var score = 0
 @export var lives = 3
@@ -31,7 +34,8 @@ func _physics_process(_delta):
 
 func update_score(value: int):
 	score += value
-	print(score)
+	emit_signal("score_updated", score)
+	# print(score)
 
 
 func _on_fall_area_body_entered(_body:Node2D):

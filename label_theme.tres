@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cmi16mk8hyf54"]
+
+[ext_resource type="FontFile" uid="uid://dsbvp4g7iqk6q" path="res://Fonts/Kenney Future Narrow.ttf" id="1_7bi72"]
+
+[resource]
+default_base_scale = 60.0
+default_font = ExtResource("1_7bi72")
+default_font_size = 60

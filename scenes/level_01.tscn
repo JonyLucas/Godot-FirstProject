@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://byborw2kkgimv"]
+[gd_scene load_steps=19 format=3 uid="uid://byborw2kkgimv"]
 
 [ext_resource type="Texture2D" uid="uid://seg4814tjjkr" path="res://sprites/environment/platform-long.png" id="1_s2eg8"]
 [ext_resource type="PackedScene" uid="uid://ycumtbmq2ro" path="res://scenes/player.tscn" id="2_cgpo8"]
@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://b3w6ccpefxdn8" path="res://scenes/red_coin.tscn" id="7_2fpnr"]
 [ext_resource type="PackedScene" uid="uid://d5ntyenxapft" path="res://scenes/silver_coin.tscn" id="8_ab3ep"]
 [ext_resource type="PackedScene" uid="uid://wewp64kpa0hq" path="res://scenes/rat.tscn" id="9_4hs4j"]
+[ext_resource type="Theme" uid="uid://cmi16mk8hyf54" path="res://label_theme.tres" id="10_6npjo"]
+[ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="10_ilnos"]
+[ext_resource type="Texture2D" uid="uid://cqmerepmbgsb6" path="res://sprites/pixel heart 2.png" id="11_64432"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oerny"]
 size = Vector2(32, 16)
@@ -1044,39 +1047,6 @@ drag_bottom_margin = 0.5
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="GoldCoin" parent="." instance=ExtResource("6_sc3k5")]
-position = Vector2(240, 464)
-
-[node name="GoldCoin2" parent="." instance=ExtResource("6_sc3k5")]
-position = Vector2(360, 464)
-
-[node name="GoldCoin3" parent="." instance=ExtResource("6_sc3k5")]
-position = Vector2(592, 464)
-
-[node name="RedCoin" parent="." instance=ExtResource("7_2fpnr")]
-position = Vector2(944, 336)
-
-[node name="RedCoin2" parent="." instance=ExtResource("7_2fpnr")]
-position = Vector2(1272, 208)
-
-[node name="SilverCoin" parent="." instance=ExtResource("8_ab3ep")]
-position = Vector2(2528, 584)
-
-[node name="Enemy" parent="." instance=ExtResource("9_4hs4j")]
-position = Vector2(1496, 600)
-
-[node name="Enemy2" parent="." instance=ExtResource("9_4hs4j")]
-position = Vector2(1848, 600)
-
-[node name="Enemy3" parent="." instance=ExtResource("9_4hs4j")]
-position = Vector2(1544, 408)
-
-[node name="Enemy4" parent="." instance=ExtResource("9_4hs4j")]
-position = Vector2(3072, 408)
-
-[node name="Enemy5" parent="." instance=ExtResource("9_4hs4j")]
-position = Vector2(3272, 856)
-
 [node name="FallArea" type="Area2D" parent="."]
 position = Vector2(8, 984)
 collision_layer = 4
@@ -1095,5 +1065,95 @@ metadata/_edit_group_ = true
 position = Vector2(0, -63)
 shape = SubResource("RectangleShape2D_u8tmv")
 
+[node name="Coins" type="Node" parent="."]
+
+[node name="GoldCoin" parent="Coins" instance=ExtResource("6_sc3k5")]
+position = Vector2(240, 464)
+
+[node name="GoldCoin2" parent="Coins" instance=ExtResource("6_sc3k5")]
+position = Vector2(360, 464)
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource("6_sc3k5")]
+position = Vector2(592, 464)
+
+[node name="RedCoin" parent="Coins" instance=ExtResource("7_2fpnr")]
+position = Vector2(944, 336)
+
+[node name="RedCoin2" parent="Coins" instance=ExtResource("7_2fpnr")]
+position = Vector2(1272, 208)
+
+[node name="SilverCoin" parent="Coins" instance=ExtResource("8_ab3ep")]
+position = Vector2(2528, 584)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("9_4hs4j")]
+position = Vector2(1496, 600)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("9_4hs4j")]
+position = Vector2(1848, 600)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("9_4hs4j")]
+position = Vector2(1544, 408)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("9_4hs4j")]
+position = Vector2(3072, 408)
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("9_4hs4j")]
+position = Vector2(3272, 856)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("10_ilnos")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -159.0
+offset_right = 159.0
+offset_bottom = 68.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_6npjo")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Score:"
+
+[node name="ScoreValue" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_6npjo")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LivesContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 16.0
+offset_right = 228.0
+offset_bottom = 68.0
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/LivesContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("11_64432")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/LivesContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("11_64432")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/LivesContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("11_64432")
+expand_mode = 2
+
+[connection signal="score_updated" from="CharacterBody2D" to="CanvasLayer" method="_on_player_score_updated"]
 [connection signal="body_entered" from="FallArea" to="CharacterBody2D" method="_on_fall_area_body_entered"]
 [connection signal="body_entered" from="FinishArea" to="CharacterBody2D" method="_on_finish_area_body_entered"]
