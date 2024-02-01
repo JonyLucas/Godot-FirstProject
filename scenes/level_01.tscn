@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://byborw2kkgimv"]
+[gd_scene load_steps=20 format=3 uid="uid://byborw2kkgimv"]
 
 [ext_resource type="Texture2D" uid="uid://seg4814tjjkr" path="res://sprites/environment/platform-long.png" id="1_s2eg8"]
 [ext_resource type="PackedScene" uid="uid://ycumtbmq2ro" path="res://scenes/player.tscn" id="2_cgpo8"]
@@ -12,6 +12,7 @@
 [ext_resource type="Theme" uid="uid://cmi16mk8hyf54" path="res://label_theme.tres" id="10_6npjo"]
 [ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="10_ilnos"]
 [ext_resource type="Texture2D" uid="uid://cqmerepmbgsb6" path="res://sprites/pixel heart 2.png" id="11_64432"]
+[ext_resource type="AudioStream" uid="uid://cxkxb3lxh7ufe" path="res://Audio/LOOP_A Creature in the Wild!.wav" id="13_d6vde"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oerny"]
 size = Vector2(32, 16)
@@ -1151,6 +1152,10 @@ texture_filter = 1
 layout_mode = 2
 texture = ExtResource("11_64432")
 expand_mode = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_d6vde")
+autoplay = true
 
 [connection signal="lives_updated" from="CharacterBody2D" to="CanvasLayer" method="_on_character_body_2d_lives_updated"]
 [connection signal="score_updated" from="CharacterBody2D" to="CanvasLayer" method="_on_player_score_updated"]

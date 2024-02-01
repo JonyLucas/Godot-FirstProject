@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0lcp4w5nuhd3"]
+[gd_scene load_steps=11 format=3 uid="uid://d0lcp4w5nuhd3"]
 
 [ext_resource type="Script" path="res://scripts/Coin.gd" id="1_gicyp"]
 [ext_resource type="Texture2D" uid="uid://r1k516uduake" path="res://sprites/coins/pixel_coins_gold.png" id="1_vj441"]
+[ext_resource type="AudioStream" uid="uid://dh4wvs2xo8a7i" path="res://Audio/collectcoin.mp3" id="3_x1fpd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_urcv4"]
 
@@ -43,6 +44,43 @@ _data = {
 "coin_animation": SubResource("Animation_ghbka")
 }
 
+[sub_resource type="Animation" id="Animation_alsrk"]
+resource_name = "collect"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(3.13834, 0.392292),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20)]
+}
+
+[sub_resource type="Animation" id="Animation_uf63r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fsllp"]
+_data = {
+"RESET": SubResource("Animation_uf63r"),
+"collect": SubResource("Animation_alsrk")
+}
+
 [node name="GoldCoin" type="Area2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_gicyp")
@@ -61,4 +99,15 @@ libraries = {
 "": SubResource("AnimationLibrary_80yhj")
 }
 
+[node name="CoinCollectionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_x1fpd")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fsllp")
+}
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -12,6 +12,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -1000
 		$AnimatedSprite.play("Jump")
+		$AudioStreamPlayer2D.play()
 
 	if Input.is_action_pressed("left_arrow"):
 		velocity.x = -300

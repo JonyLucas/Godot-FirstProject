@@ -15,5 +15,12 @@ func _on_body_entered(body:Node2D):
 	elif coint_type == coin_enum.GOLD_COIN:
 		value = 10
 	
+	$CoinCollectionSound.play()
+	$AnimationPlayer2.play("collect")
+	$CollisionShape2D.set_deferred("disabled", true)
 	body.update_score(value)
+	$Timer.start()
+
+
+func _on_timer_timeout():
 	queue_free()

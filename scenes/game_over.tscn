@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://gkkcn0y6g7bq"]
+[gd_scene load_steps=3 format=3 uid="uid://gkkcn0y6g7bq"]
+
+[ext_resource type="Theme" uid="uid://cmi16mk8hyf54" path="res://label_theme.tres" id="1_mr2yf"]
+[ext_resource type="Script" path="res://scripts/PlayButton.gd" id="2_sykcq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,3 +10,70 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0745098, 0.392157, 0.203922, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -80.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mr2yf")
+text = "Game Over, man"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30625
+anchor_top = 0.644444
+anchor_right = 0.69375
+anchor_bottom = 0.988889
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_mr2yf")
+theme_override_font_sizes/font_size = 32
+text = "Play Again"
+script = ExtResource("2_sykcq")
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_mr2yf")
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="VBoxContainer/PlayButton" method="_on_exit_button_pressed"]
