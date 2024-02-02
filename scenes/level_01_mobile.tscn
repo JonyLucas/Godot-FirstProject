@@ -1,27 +1,27 @@
-[gd_scene load_steps=23 format=3 uid="uid://byborw2kkgimv"]
+[gd_scene load_steps=23 format=3 uid="uid://cvwygeo1cduob"]
 
-[ext_resource type="Texture2D" uid="uid://seg4814tjjkr" path="res://sprites/environment/platform-long.png" id="1_s2eg8"]
-[ext_resource type="PackedScene" uid="uid://ycumtbmq2ro" path="res://scenes/player.tscn" id="2_cgpo8"]
-[ext_resource type="Texture2D" uid="uid://dbi72ul0lgux7" path="res://sprites/environment/back.png" id="3_16r6l"]
-[ext_resource type="Texture2D" uid="uid://c45j5x3um0bh7" path="res://sprites/environment/tileset.png" id="4_mg78i"]
-[ext_resource type="Texture2D" uid="uid://d0hbyqixjyurx" path="res://sprites/environment/props.png" id="5_xcy0a"]
-[ext_resource type="PackedScene" uid="uid://d0lcp4w5nuhd3" path="res://scenes/coin.tscn" id="6_sc3k5"]
-[ext_resource type="PackedScene" uid="uid://b3w6ccpefxdn8" path="res://scenes/red_coin.tscn" id="7_2fpnr"]
-[ext_resource type="PackedScene" uid="uid://d5ntyenxapft" path="res://scenes/silver_coin.tscn" id="8_ab3ep"]
-[ext_resource type="PackedScene" uid="uid://wewp64kpa0hq" path="res://scenes/rat.tscn" id="9_4hs4j"]
-[ext_resource type="Theme" uid="uid://cmi16mk8hyf54" path="res://label_theme.tres" id="10_6npjo"]
-[ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="10_ilnos"]
-[ext_resource type="Texture2D" uid="uid://cqmerepmbgsb6" path="res://sprites/pixel heart 2.png" id="11_64432"]
-[ext_resource type="AudioStream" uid="uid://cxkxb3lxh7ufe" path="res://Audio/LOOP_A Creature in the Wild!.wav" id="13_d6vde"]
-[ext_resource type="Texture2D" uid="uid://ciifqwi35bhpa" path="res://sprites/buttons/left_button.png" id="13_v38uh"]
-[ext_resource type="Texture2D" uid="uid://es03jadixdyb" path="res://sprites/buttons/right_button.png" id="14_5eip5"]
-[ext_resource type="Texture2D" uid="uid://sf432gqu7iij" path="res://sprites/buttons/up_button.png" id="15_delrt"]
+[ext_resource type="Texture2D" uid="uid://seg4814tjjkr" path="res://sprites/environment/platform-long.png" id="1_sgs4n"]
+[ext_resource type="Texture2D" uid="uid://dbi72ul0lgux7" path="res://sprites/environment/back.png" id="2_xo851"]
+[ext_resource type="Texture2D" uid="uid://c45j5x3um0bh7" path="res://sprites/environment/tileset.png" id="3_2oexa"]
+[ext_resource type="Texture2D" uid="uid://d0hbyqixjyurx" path="res://sprites/environment/props.png" id="4_txi04"]
+[ext_resource type="PackedScene" uid="uid://ycumtbmq2ro" path="res://scenes/player.tscn" id="5_q683u"]
+[ext_resource type="PackedScene" uid="uid://d0lcp4w5nuhd3" path="res://scenes/coin.tscn" id="6_xwwli"]
+[ext_resource type="PackedScene" uid="uid://b3w6ccpefxdn8" path="res://scenes/red_coin.tscn" id="7_g6pfn"]
+[ext_resource type="PackedScene" uid="uid://d5ntyenxapft" path="res://scenes/silver_coin.tscn" id="8_6kr51"]
+[ext_resource type="PackedScene" uid="uid://wewp64kpa0hq" path="res://scenes/rat.tscn" id="9_ddk30"]
+[ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="10_wo3lx"]
+[ext_resource type="Theme" uid="uid://cmi16mk8hyf54" path="res://label_theme.tres" id="11_3kyfn"]
+[ext_resource type="Texture2D" uid="uid://cqmerepmbgsb6" path="res://sprites/pixel heart 2.png" id="12_6phwi"]
+[ext_resource type="Texture2D" uid="uid://ciifqwi35bhpa" path="res://sprites/buttons/left_button.png" id="13_22pet"]
+[ext_resource type="AudioStream" uid="uid://cxkxb3lxh7ufe" path="res://Audio/LOOP_A Creature in the Wild!.wav" id="13_tuwxf"]
+[ext_resource type="Texture2D" uid="uid://es03jadixdyb" path="res://sprites/buttons/right_button.png" id="14_jq6ni"]
+[ext_resource type="Texture2D" uid="uid://sf432gqu7iij" path="res://sprites/buttons/up_button.png" id="15_d6y5t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oerny"]
 size = Vector2(32, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tw1e"]
-texture = ExtResource("4_mg78i")
+texture = ExtResource("3_2oexa")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
@@ -516,7 +516,7 @@ texture = ExtResource("4_mg78i")
 15:21/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xtgat"]
-texture = ExtResource("5_xcy0a")
+texture = ExtResource("4_txi04")
 21:1/0 = 0
 21:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 21:1/0/physics_layer_0/angular_velocity = 0.0
@@ -893,7 +893,7 @@ sources/0 = SubResource("TileSetAtlasSource_5tw1e")
 sources/1 = SubResource("TileSetAtlasSource_xtgat")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlpjy"]
-size = Vector2(3490, 90)
+size = Vector2(3950, 104)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8tmv"]
 size = Vector2(112, 146)
@@ -914,7 +914,7 @@ shape = SubResource("RectangleShape2D_oerny")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground/StaticBody2D"]
 texture_filter = 1
-texture = ExtResource("1_s2eg8")
+texture = ExtResource("1_sgs4n")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Ground"]
 visible = false
@@ -927,7 +927,7 @@ shape = SubResource("RectangleShape2D_oerny")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground/StaticBody2D2"]
 texture_filter = 1
-texture = ExtResource("1_s2eg8")
+texture = ExtResource("1_sgs4n")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Ground"]
 visible = false
@@ -940,7 +940,7 @@ shape = SubResource("RectangleShape2D_oerny")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground/StaticBody2D3"]
 texture_filter = 1
-texture = ExtResource("1_s2eg8")
+texture = ExtResource("1_sgs4n")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Ground"]
 visible = false
@@ -953,7 +953,7 @@ shape = SubResource("RectangleShape2D_oerny")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground/StaticBody2D4"]
 texture_filter = 1
-texture = ExtResource("1_s2eg8")
+texture = ExtResource("1_sgs4n")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Ground"]
 visible = false
@@ -966,7 +966,7 @@ shape = SubResource("RectangleShape2D_oerny")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground/StaticBody2D5"]
 texture_filter = 1
-texture = ExtResource("1_s2eg8")
+texture = ExtResource("1_sgs4n")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Ground"]
 visible = false
@@ -979,7 +979,7 @@ shape = SubResource("RectangleShape2D_oerny")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground/StaticBody2D6"]
 texture_filter = 1
-texture = ExtResource("1_s2eg8")
+texture = ExtResource("1_sgs4n")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Ground"]
 visible = false
@@ -992,7 +992,7 @@ shape = SubResource("RectangleShape2D_oerny")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground/StaticBody2D7"]
 texture_filter = 1
-texture = ExtResource("1_s2eg8")
+texture = ExtResource("1_sgs4n")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Ground"]
 visible = false
@@ -1005,14 +1005,14 @@ shape = SubResource("RectangleShape2D_oerny")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground/StaticBody2D8"]
 texture_filter = 1
-texture = ExtResource("1_s2eg8")
+texture = ExtResource("1_sgs4n")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
 show_behind_parent = true
 offset_right = 1152.0
 offset_bottom = 720.0
-texture = ExtResource("3_16r6l")
+texture = ExtResource("2_xo851")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -1031,10 +1031,10 @@ motion_mirroring = Vector2(1536, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture_filter = 1
 scale = Vector2(4, 4)
-texture = ExtResource("3_16r6l")
+texture = ExtResource("2_xo851")
 centered = false
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_cgpo8")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_q683u")]
 position = Vector2(104, 424)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -1056,7 +1056,7 @@ collision_layer = 4
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallArea"]
-position = Vector2(1735, 35)
+position = Vector2(1735, 28)
 shape = SubResource("RectangleShape2D_qlpjy")
 
 [node name="FinishArea" type="Area2D" parent="."]
@@ -1070,46 +1070,46 @@ shape = SubResource("RectangleShape2D_u8tmv")
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="GoldCoin" parent="Coins" instance=ExtResource("6_sc3k5")]
+[node name="GoldCoin" parent="Coins" instance=ExtResource("6_xwwli")]
 position = Vector2(240, 464)
 
-[node name="GoldCoin2" parent="Coins" instance=ExtResource("6_sc3k5")]
+[node name="GoldCoin2" parent="Coins" instance=ExtResource("6_xwwli")]
 position = Vector2(360, 464)
 
-[node name="GoldCoin3" parent="Coins" instance=ExtResource("6_sc3k5")]
+[node name="GoldCoin3" parent="Coins" instance=ExtResource("6_xwwli")]
 position = Vector2(592, 464)
 
-[node name="RedCoin" parent="Coins" instance=ExtResource("7_2fpnr")]
+[node name="RedCoin" parent="Coins" instance=ExtResource("7_g6pfn")]
 position = Vector2(944, 336)
 
-[node name="RedCoin2" parent="Coins" instance=ExtResource("7_2fpnr")]
+[node name="RedCoin2" parent="Coins" instance=ExtResource("7_g6pfn")]
 position = Vector2(1272, 208)
 
-[node name="SilverCoin" parent="Coins" instance=ExtResource("8_ab3ep")]
+[node name="SilverCoin" parent="Coins" instance=ExtResource("8_6kr51")]
 position = Vector2(2528, 584)
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource("9_4hs4j")]
+[node name="Enemy" parent="Enemies" instance=ExtResource("9_ddk30")]
 position = Vector2(1496, 600)
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource("9_4hs4j")]
+[node name="Enemy2" parent="Enemies" instance=ExtResource("9_ddk30")]
 position = Vector2(1848, 600)
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource("9_4hs4j")]
+[node name="Enemy3" parent="Enemies" instance=ExtResource("9_ddk30")]
 position = Vector2(1544, 408)
 
-[node name="Enemy6" parent="Enemies" instance=ExtResource("9_4hs4j")]
-position = Vector2(784, 472)
+[node name="Enemy6" parent="Enemies" instance=ExtResource("9_ddk30")]
+position = Vector2(816, 472)
 
-[node name="Enemy4" parent="Enemies" instance=ExtResource("9_4hs4j")]
+[node name="Enemy4" parent="Enemies" instance=ExtResource("9_ddk30")]
 position = Vector2(3072, 408)
 
-[node name="Enemy5" parent="Enemies" instance=ExtResource("9_4hs4j")]
+[node name="Enemy5" parent="Enemies" instance=ExtResource("9_ddk30")]
 position = Vector2(3272, 856)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("10_ilnos")
+script = ExtResource("10_wo3lx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 5
@@ -1123,13 +1123,13 @@ alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("10_6npjo")
+theme = ExtResource("11_3kyfn")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Score:"
 
 [node name="ScoreValue" type="Label" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("10_6npjo")
+theme = ExtResource("11_3kyfn")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "00"
 horizontal_alignment = 1
@@ -1144,19 +1144,19 @@ metadata/_edit_group_ = true
 [node name="Heart3" type="TextureRect" parent="CanvasLayer/LivesContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("11_64432")
+texture = ExtResource("12_6phwi")
 expand_mode = 2
 
 [node name="Heart2" type="TextureRect" parent="CanvasLayer/LivesContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("11_64432")
+texture = ExtResource("12_6phwi")
 expand_mode = 2
 
 [node name="Heart1" type="TextureRect" parent="CanvasLayer/LivesContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("11_64432")
+texture = ExtResource("12_6phwi")
 expand_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
@@ -1171,26 +1171,23 @@ metadata/_edit_use_anchors_ = true
 [node name="LeftButton" type="TouchScreenButton" parent="CanvasLayer/CenterContainer"]
 position = Vector2(0, -53)
 scale = Vector2(0.05, 0.05)
-texture_normal = ExtResource("13_v38uh")
+texture_normal = ExtResource("13_22pet")
 action = "left_arrow"
-visibility_mode = 1
 
 [node name="RightButton" type="TouchScreenButton" parent="CanvasLayer/CenterContainer"]
 position = Vector2(187, -53)
 scale = Vector2(0.05, 0.05)
-texture_normal = ExtResource("14_5eip5")
+texture_normal = ExtResource("14_jq6ni")
 action = "right_arrow"
-visibility_mode = 1
 
 [node name="JumpButton" type="TouchScreenButton" parent="CanvasLayer/CenterContainer"]
 position = Vector2(1104, -53)
 scale = Vector2(0.05, 0.05)
-texture_normal = ExtResource("15_delrt")
+texture_normal = ExtResource("15_d6y5t")
 action = "jump"
-visibility_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_d6vde")
+stream = ExtResource("13_tuwxf")
 autoplay = true
 
 [connection signal="lives_updated" from="CharacterBody2D" to="CanvasLayer" method="_on_character_body_2d_lives_updated"]

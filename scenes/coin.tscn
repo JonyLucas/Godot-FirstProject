@@ -83,6 +83,7 @@ _data = {
 
 [node name="GoldCoin" type="Area2D"]
 scale = Vector2(3, 3)
+collision_layer = 16
 script = ExtResource("1_gicyp")
 coint_type = 2
 

@@ -50,6 +50,7 @@ _data = {
 size = Vector2(29.3333, 21)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4qw22"]
+radius = 13.3998
 
 [node name="Enemy" type="CharacterBody2D"]
 texture_filter = 1
@@ -84,12 +85,12 @@ position = Vector2(0, -1.66667)
 shape = SubResource("RectangleShape2D_cun8e")
 
 [node name="FireballCollisionChecker" type="Area2D" parent="."]
-collision_layer = 64
+collision_layer = 32
 collision_mask = 64
+input_pickable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireballCollisionChecker"]
-position = Vector2(-4.33333, 0.333333)
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_4qw22")
 
 [connection signal="body_entered" from="CollisionChecker" to="." method="_on_collision_checker_body_entered"]
-[connection signal="body_entered" from="FireballCollisionChecker" to="." method="_on_fireball_collision_body_entered"]

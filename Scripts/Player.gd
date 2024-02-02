@@ -34,7 +34,7 @@ func _physics_process(_delta):
 		var fireball = FIREBALL.instantiate()
 		get_parent().add_child(fireball)
 		fireball.global_position = $Position2D.global_position
-		fireball.velocity.x = 500 if $AnimatedSprite.flip_h == false else -500
+		fireball.turnedRight = $AnimatedSprite.flip_h
 
 	velocity.y += gravity * _delta # The sum makes the vector points down
 	move_and_slide() # Godot function that moves the character and makes it slide on slopes
@@ -46,12 +46,14 @@ func update_score(value: int):
 	# print(score)
 
 
-func _on_fall_area_body_entered(_body:Node2D):
-	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+func _on_fall_area_body_entered(body:Node2D):
+	if body.has_method("take_damage"):
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	# get_tree().reload_current_scene()
 
-func _on_finish_area_body_entered(_body:Node2D):
-	get_tree().change_scene_to_file("res://scenes/level_01.tscn")
+func _on_finish_area_body_entered(body:Node2D):
+	if body.has_method("take_damage"):
+		get_tree().change_scene_to_file("res://scenes/level_01.tscn")
 
 func take_damage():
 	PlayerVars.lives -= 1
