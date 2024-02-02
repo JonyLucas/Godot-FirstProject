@@ -58,3 +58,7 @@ fire={
 2d_physics/layer_5="Collectable"
 2d_physics/layer_6="Enemy"
 2d_physics/layer_7="Fireball"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
