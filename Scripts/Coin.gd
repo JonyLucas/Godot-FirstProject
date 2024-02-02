@@ -7,6 +7,9 @@ func _ready():
 	$AnimationPlayer.play("coin_animation")
 
 func _on_body_entered(body:Node2D):
+	if not body.has_method("update_score"):
+		return
+	
 	var value = 0
 	if coint_type == coin_enum.SILVER_COIN:
 		value = 1

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d5ntyenxapft" path="res://scenes/silver_coin.tscn" id="8_ab3ep"]
 [ext_resource type="PackedScene" uid="uid://wewp64kpa0hq" path="res://scenes/rat.tscn" id="9_4hs4j"]
 [ext_resource type="Theme" uid="uid://cmi16mk8hyf54" path="res://label_theme.tres" id="10_6npjo"]
-[ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="10_ilnos"]
+[ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="10_ilnos"]
 [ext_resource type="Texture2D" uid="uid://cqmerepmbgsb6" path="res://sprites/pixel heart 2.png" id="11_64432"]
 [ext_resource type="AudioStream" uid="uid://cxkxb3lxh7ufe" path="res://Audio/LOOP_A Creature in the Wild!.wav" id="13_d6vde"]
 

@@ -16,6 +16,7 @@ func _on_character_body_2d_lives_updated(value:Variant):
 	if(lives == 2):
 		$LivesContainer/Heart3.visible = false
 	elif(lives == 1):
+		$LivesContainer/Heart3.visible = false
 		$LivesContainer/Heart2.visible = false
 	elif(lives == 0):
 		$LivesContainer/Heart1.visible = false

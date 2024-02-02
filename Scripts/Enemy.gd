@@ -19,3 +19,7 @@ func _on_collision_checker_body_entered(body:Node2D):
 	if body.has_method("take_damage"):
 		body.take_damage()
 		
+
+
+func _on_fireball_collision_body_entered(_body:Node2D):
+	queue_free()
